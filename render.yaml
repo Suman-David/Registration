@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: registration-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    rootDir: backend
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_HOST
+        value: mysql-24819173-sumandavid2025-63c0.h.aivencloud.com
+      - key: DB_PORT
+        value: 20984
+      - key: DB_USER
+        value: avnadmin
+      - key: DB_NAME
+        value: defaultdb
+      - key: DB_SSL
+        value: true
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DB_PASSWORD
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
