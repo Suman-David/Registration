@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 const corsOrigin = process.env.NODE_ENV === 'production'
-    ? process.env.FRONTEND_URL
+    ? [process.env.FRONTEND_URL, 'https://registration-alpha-azure.vercel.app']
     : ['http://localhost:5173', 'http://localhost:5174'];
 
 app.use(cors({
